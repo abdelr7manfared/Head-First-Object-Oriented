@@ -8,10 +8,7 @@ from GuitarSpec import GuitarSpec
 class Inventory:
     def __init__(self) -> None:
         self._guitars = []
-    
-    def addGuitar(self,serialNumber: str,price: float,builder: Builder,
-                  model: str,type: Type,backWood: Wood,topWood: Wood,numString: int)->None:
-        guitarSpec = GuitarSpec(builder,model,type,backWood,topWood,numString)
+    def addGuitar(self,serialNumber: str,price: float,guitarSpec: GuitarSpec) -> None:
         guitar = Guitar(serialNumber,price,guitarSpec)
         self._guitars.append(guitar)
             
